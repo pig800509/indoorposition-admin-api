@@ -1,0 +1,6 @@
+{
+  "body": "{\"areaName\":\"21FD1\",\"cameras\":[\"f64f2940-fae4-11e7-8c5f-ef356f279131\",\"f64f2940-fae4-11e7-8c5f-ef356f279138\"],\"building\":\"D\",\"floor\":21,\"height\":25,\"image\":\"https://s3.amazonaws.com/fake-api-field-image/fackemap.jpg\",\"room\":\"2101\",\"areaStatus\":\"available\",\"width\":25,\"zones\":[\"f64f2940-fae4-11e7-8c5f-ef356f279131\",\"f64f2940-fae4-11e7-8c5f-ef356f279138\"]}",
+  "pathParameters": {
+    "id": "f64f2940-fae4-11e7-8c5f-ef356f279131"
+  }
+}

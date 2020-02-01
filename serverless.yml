@@ -1,0 +1,61 @@
+service: indoorposition-admin-api
+
+plugins:
+  - serverless-webpack
+
+custom:
+  webpackIncludeModules: true
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  stage: prod
+  region: ap-northeast-2
+
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:DescribeTable
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+        - dynamodb:BatchGetItem
+      Resource: "arn:aws:dynamodb:ap-northeast-2:*:*"
+
+functions:
+  
+  AreaCreate:
+    handler: area.create
+    events:
+      - http:
+          path: area
+          method: post
+          cors: true
+
+  AreaList:
+    handler: area.list
+    events:
+      - http:
+          path: area
+          method: get
+          cors: true
+
+  AreaUpdate:
+    handler: area.update
+    events:
+      - http:
+          path: area/{id}
+          method: put
+          cors: true
+
+  AreaDelete:
+    handler: area.delete
+    events:
+      - http:
+          path: area/{id}
+          method: delete
+          cors: true
+

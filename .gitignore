@@ -1,0 +1,13 @@
+# package directories
+node_modules/
+public/thumbnail/*
+
+.sonarlint/
+.vscode/
+
+yarn.lock
+package-lock.json
+
+# Serverless directories
+.serverless
+.npmignore
